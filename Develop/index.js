@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('/generateMarkdown.js');
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -18,18 +18,18 @@ const questions = [
     message: "Provide a description of your project?",
     name: 'Description',
 },
-{
-    //user creates a list, still need to onput on this list
-    type: 'input',
-    message: "Table of contents",
-    name: 'TOContents'
-},
+// {
+//     //user creates a list, still need to onput on this list
+//     type: 'input',
+//     message: "Table of contents",
+//     name: 'TOContents',
+// },
 {
     //holds instructions to install
     //Needs to be added to the Installation section
     type: 'input',
     message: "Enter the installation instructions: ",
-    name: 'install'
+    name: 'install',
 },
 {
     //git license
@@ -39,7 +39,7 @@ const questions = [
     choices: ['GNU AGPLv3', 'GNU GPLv3', 
     'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache 2.0', 'MIT',
     'Boost Software License 1.0', 'The Unlicense'], 
-    name: 'license'
+    name: 'license',
 
   //  WHEN I choose a license for my application from a list of options
 //THEN a badge for that license is added near the top of the README and 
@@ -51,14 +51,14 @@ const questions = [
     //Needs to be added to the Contribution section
     type: 'input',
     message: "Contribution Information: ",
-    name: 'contribution'
+    name: 'contribution',
 },
 {
     //test instructions
     //Needs to be added to the Test Instruction section
     type: 'input',
     message: "Enter the test instructions: ",
-    name: 'test'
+    name: 'test',
 },
 {
     type:'input',

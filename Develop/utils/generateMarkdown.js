@@ -1,6 +1,6 @@
-const inquirer = require('inquier');
+const inquirer = require('inquirer');
 const fs = require('fs');
-const index = require('..index.js');
+const index = require('../index.js');
 
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -62,46 +62,43 @@ return licenseSection;
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
-  return 
-  `# ${answers.Title}
+  return `# ${answers.Title}
 
   ## ${renderLicenseSection(answer.license)} ${renderLicenseBadge(answer.license)}
   ### ${renderLicenseLink(answer.license)}
 
-        ## Table of Contents
-      ###  * space creates list
-      ###  * [Project Description](#Description)
-      ###  * [Usage](#Usage)
-      ###  * [Contributing](#Contributing)
-      ###  * [Installation](#Installation)
-      ###  * [License](#License)
+  ## Table of Contents
+  ###  * [Project Description](#Description)
+  ###  * [Usage](#Usage)
+  ###  * [Contributing](#Contributing)
+  ###  * [Installation](#Installation)
+  ###  * [License](#License)
       
-        ## Description
-        ### ${answers.Description}
+  ## Description
+  ### ${answers.Description}
       
-        ## Usage
-        ### ${answers.Usage}
+  ## Usage
+  ### ${answers.Usage}
       
-        ## Installation
-        ### ${answers.install}
+  ## Installation
+  ### ${answers.install}
 
-        ## Contributions
-        ### ${answers.contribution}
+  ## Contributions
+  ### ${answers.contribution}
 
-        ##Tests
-        ### ${answers.test}
+  ## Tests
+  ### ${answers.test}
       
-        ## Questions
-        ### ${answers.email}
+  ## Questions
+  ### ${answers.email}
         
-        ## License
-        ### ${answers.gitusername}
+  ## License
+    ### ${answers.gitusername}
 
-        ##Questions:
-        ### Please reach out if you have any questions
-        ### Github: https://github.com/${answer.github}
-        ### Email: ${answers.email}
-  `;
+  ## Questions:
+  ### Please reach out if you have any questions
+  ### Github: https://github.com/${answers.github}
+  ### Email: ${answers.email}`;
 }
-
+generateMarkdown();
 module.exports = generateMarkdown;
